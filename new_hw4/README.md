@@ -139,14 +139,6 @@ Write comprehensive tests for:
 7. **Edge cases** - empty matrices, single elements, non-square matrices
 8. **Mathematical properties** - e.g., `(A^T)^T = A`, `A + 0 = A`, `trace(I_n) = n`
 
-## File Structure
-```
-matrix.h       // Class declaration
-matrix.cc      // Implementation
-unit_tests.cc  // Google Test unit tests
-Makefile       // Build configuration
-```
-
 ## Example Usage
 ```cpp
 Matrix A = {{1, 2}, {3, 4}};
@@ -160,13 +152,16 @@ double tr = A.trace();      // Trace
 double n = A.norm();        // Norm
 ```
 
+## File Structure
 Your hw_4 directory should look like:
 
+```
 matrix.h
 matrix.cc
 main.cc
 Makefile
 typed_array.h
-unit_tests.cc
+unit_tests.cc   
+```
 
 Use `unit_tests.cc` for all of your tests (we'll replace it with ours later).
