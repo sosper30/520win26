@@ -1,7 +1,34 @@
-# Matrix Class Assignment
+# HW4 Assignment
 
-## Objective
-Implement a Matrix class in C++. 
+Within your private Github repository called `520-Assignments`, please make a new directory called `hw_4`.
+
+**Note:** For this assignment, you will want to clone the code from Lecture 4, specifically the package `typed_array`.
+
+---
+
+## Requirements
+
+1.  Add the methods `push`, `pop`, `push_front`, and `pop_front` to the `TypedArray` class. Be sure to write your tests first. The arguments to these functions should be declared as `const`. The `pop` methods should return `ElementType` or throw `std::range_error` with the message `"Cannot pop from an empty array"`.
+
+2.  Add a method `TypedArray concat(const TypedArray& other);` to the `TypedArray` class. It should return a new array that is a concatenation of the `this` array and the `other` array, leaving both original arrays untouched. For example:
+    ```cpp
+    TypedArray<int> a;
+    a.set(0, 0);
+    a.set(1, 1);
+    TypedArray<int> b = a.concat(a).concat(a); // yields a new array [0,1,0,1,0,1]
+                                               // a should remain [0,1].
+    ```
+
+3.  Define a `TypedArray` method called `reverse` that reverses the array in-place. It should modify the array it is called on and return a reference to the array itself (i.e., `return *this;`).
+
+4.  Overload the `+` operator for the `TypedArray` class to perform concatenation. You should be able to replace the `concat` example line with the following:
+    ```cpp
+    TypedArray<int> b = a + a + a; // yields a new array [0,1,0,1,0,1]
+    ```
+
+---
+
+5.  Implement a `Matrix` class with following requirements:
 
 ## Requirements
 
@@ -132,3 +159,14 @@ Matrix F = A.transpose();   // Transpose
 double tr = A.trace();      // Trace
 double n = A.norm();        // Norm
 ```
+
+Your hw_4 directory should look like:
+
+matrix.h
+matrix.cc
+main.cc
+Makefile
+typed_array.h
+unit_tests.cc
+
+Use `unit_tests.cc` for all of your tests (we'll replace it with ours later).
