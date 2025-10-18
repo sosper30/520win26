@@ -1,0 +1,159 @@
+=== LLM Agent Tool Use Loop ===
+User Query: What's 2847 * 3921?
+
+--- Iteration 1 ---
+LLM Response (finish_reason: tool_calls)
+Executing tool: calculator
+Arguments: {
+  "a": 2847,
+  "b": 3921,
+  "operation": "multiply"
+}
+Tool Result: {
+  "result": 11163087.0
+}
+
+--- Iteration 2 ---
+LLM Response (finish_reason: stop)
+Final LLM Response: The result of multiplying 2847 by 3921 is 11,163,087.
+
+=== Final Result ===
+{
+  "final_response": "The result of multiplying 2847 by 3921 is 11,163,087.",
+  "success": true
+}
+
+============================================================
+
+
+=== LLM Agent Tool Use Loop ===
+User Query: Find the mean and standard deviation of: 23, 45, 67, 12, 89, 34, 56, 78
+
+--- Iteration 1 ---
+LLM Response (finish_reason: tool_calls)
+Executing tool: calculate_statistics
+Arguments: {
+  "numbers": [
+    23,
+    45,
+    67,
+    12,
+    89,
+    34,
+    56,
+    78
+  ]
+}
+Tool Result: {
+  "count": 8,
+  "max": 89.0,
+  "mean": 50.5,
+  "median": 50.5,
+  "min": 12.0,
+  "std_dev": 25.20416632225712
+}
+
+--- Iteration 2 ---
+LLM Response (finish_reason: stop)
+Final LLM Response: The mean of the dataset is **50.5**, and the standard deviation is approximately **25.20**.
+
+=== Final Result ===
+{
+  "final_response": "The mean of the dataset is **50.5**, and the standard deviation is approximately **25.20**.",
+  "success": true
+}
+
+============================================================
+
+
+=== LLM Agent Tool Use Loop ===
+User Query: Generate the first 20 Fibonacci numbers, then calculate their mean and median.
+
+--- Iteration 1 ---
+LLM Response (finish_reason: tool_calls)
+Executing tool: fibonacci_sequence
+Arguments: {
+  "n": 20
+}
+Tool Result: {
+  "count": 20,
+  "sequence": [
+    0.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    13.0,
+    21.0,
+    34.0,
+    55.0,
+    89.0,
+    144.0,
+    233.0,
+    377.0,
+    610.0,
+    987.0,
+    1597.0,
+    2584.0,
+    4181.0
+  ]
+}
+
+--- Iteration 2 ---
+LLM Response (finish_reason: tool_calls)
+Executing tool: calculate_statistics
+Arguments: {
+  "numbers": [
+    0.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    13.0,
+    21.0,
+    34.0,
+    55.0,
+    89.0,
+    144.0,
+    233.0,
+    377.0,
+    610.0,
+    987.0,
+    1597.0,
+    2584.0,
+    4181.0
+  ]
+}
+Tool Result: {
+  "count": 20,
+  "max": 4181.0,
+  "mean": 547.25,
+  "median": 44.5,
+  "min": 0.0,
+  "std_dev": 1055.812808929689
+}
+
+--- Iteration 3 ---
+LLM Response (finish_reason: stop)
+Final LLM Response: The first 20 Fibonacci numbers are:
+
+\[ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181 \]
+
+### Statistics:
+- **Mean:** 547.25
+- **Median:** 44.5
+- **Minimum:** 0
+- **Maximum:** 4181
+- **Standard Deviation:** 1055.81
+
+=== Final Result ===
+{
+  "final_response": "The first 20 Fibonacci numbers are:\n\n\\[ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181 \\]\n\n### Statistics:\n- **Mean:** 547.25\n- **Median:** 44.5\n- **Minimum:** 0\n- **Maximum:** 4181\n- **Standard Deviation:** 1055.81",
+  "success": true
+}
+
+============================================================
