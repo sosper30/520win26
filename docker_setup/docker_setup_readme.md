@@ -70,9 +70,9 @@ Step 1: Build and Start the Container
 
 Open a terminal and navigate to this project directory. Run the following command:
 
-    ```
-    docker-compose up -d --build
-    ```
+```
+docker-compose up -d --build
+```
 
 This command will:
 
@@ -86,9 +86,9 @@ Step 2: Get a Shell Inside the Container
 
 Now that the container is running, "enter" it by running this command:
 
-    ```
-    docker exec -it eep520 /bin/bash
-    ```
+```
+docker exec -it eep520 /bin/bash
+```
 
 Your terminal prompt will change. You are now "inside" the Docker container and are in the /workspace directory (which is the same as your project directory). You can check by typing ls. 
 
@@ -98,14 +98,14 @@ Inside the container, you can now compile and run your code just as you would on
 Step 4: Exit the Container
 When you are done, just type exit to leave the container.
 
-    ```
-    exit
-    ```
+```
+exit
+```
 Your terminal will return to normal. The container will keep running in the background.
 
 ## 5. Stopping the Container
 When you are completely finished working for the day, run this command to stop and remove the container. 
 
-    ```
-    docker-compose down
-    ```
+```
+docker-compose down
+```
