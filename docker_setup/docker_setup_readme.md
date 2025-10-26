@@ -1,8 +1,8 @@
-# EEP 520: C++ Development Environment
+# EEP 520: C/C++ Development Environment
 
 ## 1. Overview
 
-This course provides a self-contained C++ development environment using Docker. It includes all the necessary tools for this course, such as:
+This course provides a self-contained C/C++ development environment using Docker. It includes all the necessary tools for this course, such as:
 * `g++` / `gcc`
 * `make` / `cmake`
 * `gdb` (The GNU Debugger)
