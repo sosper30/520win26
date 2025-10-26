@@ -48,16 +48,7 @@ You can create your homework folders, `main.cpp` files, and `Makefiles` right he
 
 A good structure would be:
 
-eep520-docker-project/
-│
-├── docker-compose.yml    (From course)
-├── Dockerfile            (From course)
-│
-├── hw1/                  (Your work)
-│   └── main.cpp
-│
-└── hw2/                  (Your work)
-    └── my_program.cpp
+<pre> ``` eep520-docker-project/ │ ├── docker-compose.yml (From course) ├── Dockerfile (From course) │ ├── hw1/ (Your work) │ └── main.cpp │ └── hw2/ (Your work) └── my_program.cpp ``` </pre>
 
 
 ## 4. Setup 
