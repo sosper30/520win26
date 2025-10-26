@@ -53,10 +53,12 @@ eep520-docker-project/
 ├── docker-compose.yml    (From course)
 ├── Dockerfile            (From course)
 │
-└── hw1/                    (Your work)
+├── hw1/                  (Your work)
 │   └── main.cpp
-└── hw2/                    (Your work)
+│
+└── hw2/                  (Your work)
     └── my_program.cpp
+
 
 ## 4. Setup 
 
@@ -68,7 +70,7 @@ Step 1: Build and Start the Container
 
 Open a terminal and navigate to this project directory. Run the following command:
 
-    ```bash
+    ```
     docker-compose up -d --build
     ```
 
@@ -84,7 +86,7 @@ Step 2: Get a Shell Inside the Container
 
 Now that the container is running, "enter" it by running this command:
 
-    ```bash
+    ```
     docker exec -it eep520 /bin/bash
     ```
 
@@ -96,7 +98,7 @@ Inside the container, you can now compile and run your code just as you would on
 Step 4: Exit the Container
 When you are done, just type exit to leave the container.
 
-    ```bash
+    ```
     exit
     ```
 Your terminal will return to normal. The container will keep running in the background.
@@ -104,6 +106,6 @@ Your terminal will return to normal. The container will keep running in the back
 ## 5. Stopping the Container
 When you are completely finished working for the day, run this command to stop and remove the container. 
 
-    ```bash
+    ```
     docker-compose down
     ```
