@@ -15,6 +15,7 @@ You will edit code on your main computer (the "host") and compile/run it *inside
 ## 2. Prerequisites
 
 You must install **Docker** on your system.
+
 Mac
 ---
 - Go to https://www.docker.com/
