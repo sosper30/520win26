@@ -65,6 +65,7 @@ Vocabulary:
 - **container**: A running unix kernel using that filesystem
 
 Step 1: Build and Start the Container
+
 Open a terminal and navigate to this project directory. Run the following command:
 
     ```bash
