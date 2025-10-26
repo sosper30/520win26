@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  cpp-dev:
+    build: .
+    container_name: eep520
+    volumes:
+      - ./:/workspace # ./workspace:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    # Security options for AddressSanitizer
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    # Increase memory limit for AddressSanitizer
+    mem_limit: 2g
+    memswap_limit: 2g
