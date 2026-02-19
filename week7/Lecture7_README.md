@@ -317,6 +317,13 @@ To run a docker container with Elma already installed, do
 ```bash
 docker run -v $PWD:/source -it klavins/elma:latest bash  // MacOS, Linux
 docker run -v /$PWD:/source -it klavins/elma:latest bash  // Windows
+
+Possible Substitution for Windows:
+MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL="*" docker run --rm -it -v "$(pwd):/source" klavins/elma:latest bash
+docker run --rm -it -v XXX:/source klavins/elma:latest bash
+(Put your directory you want in XXX)
+
+If non of these work, put your error on chatgpt.
 ```
 
 or similar, depending on your configuration. This will load an image that Professor Klavins has already prepared and put up on [Dockerhub](https://hub.docker.com/repository/docker/klavins/elma).
