@@ -8,9 +8,6 @@ Goal: Be creative. Make a fun, engaging, and or informative simulation or game. 
 
 Projects must meet all the following specified criteria to ensure adequate complexity and demonstration of key concepts.
 
-## Submission Requirements
-- **Gameplay Video/GIF**: 30-60 seconds demonstrating the project in action
-
 ## Core Requirements
 
 ### 1. Randomness Requirement
